@@ -1,0 +1,15 @@
+version: '3.1'
+services:
+  telegram_bot:
+    image: postgres:13.7
+    restart: no
+    volumes:
+      # Если мы хотим предотвратить потерю данных при удалении контейнера, можно установить эту настройку и данные будут храниться на локальной машине {your_path} - твой путь
+      - ./postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5435:5432"
+    environment:
+      - POSTGRES_USER=telegram_bot
+      - POSTGRES_PASSWORD=telegram_bot
+      - POSTGRES_DB=telegram_bot
+    command: [ "postgres", "-c", "log_statement=all" ]
