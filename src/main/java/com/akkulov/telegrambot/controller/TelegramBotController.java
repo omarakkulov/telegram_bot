@@ -1,11 +1,7 @@
 package com.akkulov.telegrambot.controller;
 
 import com.akkulov.telegrambot.config.TelegramBotProperties;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import java.util.Optional;
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
 import org.springframework.stereotype.Component;
